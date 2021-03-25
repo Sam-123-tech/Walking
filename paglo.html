@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Walking</title>
+    <style>
+        body{
+            background: #ff0084;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff0084, #000000,  #004e92, #000428, #BA8B02, #181818, #52c234, #061700, #870000, #190A05, #41295a, #000) ;  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff0084 , #000000, #004e92, #000428, #BA8B02, #181818, #52c234, #061700, #870000, #190A05, #41295a, #000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .road{
+            border-bottom: 8px dashed ghostwhite;
+        }
+        .panda{
+            background: url(girl.png);
+            width: 250px;
+            height: 340px;
+            animation: walk 1s steps(12) infinite,
+                      forward 5s linear infinite;     
+        }
+        @keyframes walk
+        {
+            0%
+            {
+                background-position: 0px;
+            }
+            100%
+            {
+                background-position: 3000px;
+            }
+        }
+        @keyframes forward{
+            0%
+            {
+                transform: translateX(-100px);
+            }
+            100%
+            {
+                transform: translateX(1200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="panda"></div>
+    <div class="road"></div>
+</body>
+</html>
